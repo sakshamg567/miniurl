@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "shared/proto/tokenpb";
+
+service TokenService {
+   rpc NextID (NextIDReq) returns (NextIDRes);
+}
+
+message NextIDReq{}
+
+message NextIDRes{
+   uint64 id = 1;
+}
